@@ -1,0 +1,24 @@
+'use strict'
+const express = require('express');
+const request = require('request');
+const bodyParser = require('body-parser');
+const btoa = require('btoa');
+const port = process.env.PORT || 5000;
+let app = express();
+app.use(bodyParser.json());
+
+app.get('/ping', function (req, res) {
+    res.send('pong!');
+});
+
+app.use(express.static(__dirname + '/build/'));
+app.get('*', (req, res) => {
+  res.res.redirect('/');
+});
+app.listen(port, (err) => {
+  if (err) {
+    console.log(err);
+    return;
+  }
+  console.log(`Server is live at port: ${port}`);
+});
