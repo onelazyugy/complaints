@@ -10,7 +10,7 @@ class Home extends Component {
   render = () => {
     return (
       <div>
-        <h4>Complaints App Home Page</h4>
+        <h4>Home Page</h4>
       </div>
     );
   };

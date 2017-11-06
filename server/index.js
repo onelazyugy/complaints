@@ -10,13 +10,14 @@ const port = process.env.PORT || 5000;
 let app = express();
 app.use(bodyParser.json());
 
-app.get('/ping', function (req, res) {
+app.get('/api/ping', function (req, res) {
     res.send('pong!');
 });
 
 app.use(express.static(__dirname + '/build/'));
+
 app.get('*', (req, res) => {
-  res.redirect('/');
+  res.sendFile(path.join(__dirname+'/build/index.html'));
 });
 
 app.listen(port, (err) => {
