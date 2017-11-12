@@ -23,9 +23,9 @@ class Header extends Component {
     return (
       <div>
         <AppBar style={bg} titleStyle={title}
-          title="Complaints"
+          title={<Link to={"/"}>Complaints</Link>}
           iconElementLeft={<Link to={"/"}><img src={logo} className="app-logo" alt="logo" /></Link>}
-          iconElementRight={<FlatButton label="Login" style={{color: "black"}}/>}
+          iconElementRight={<Link to={"/about"}><FlatButton label="About" style={{color: "black"}}/></Link>}
         />
       </div>
     );
