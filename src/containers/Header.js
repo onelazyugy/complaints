@@ -17,12 +17,9 @@ class Header extends Component {
       position: "fixed",
       top: 0
     }
-    const title = {
-      color: "black"
-    }
     return (
       <div>
-        <AppBar style={bg} titleStyle={title}
+        <AppBar style={bg}
           title={<Link to={"/"}>Complaints</Link>}
           iconElementLeft={<Link to={"/"}><img src={logo} className="app-logo" alt="logo" /></Link>}
           iconElementRight={<Link to={"/about"}><FlatButton label="About" style={{color: "black"}}/></Link>}
