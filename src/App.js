@@ -15,11 +15,13 @@ class App extends Component {
       <div>
         <MuiThemeProvider>
           <BrowserRouter>
-            <div className="container">
+            <div className="container app-body-bg">
               <Header />
-              <Route exact={true} path="/" component={Home} />
-              <Route exact={true} path="/about" component={About} />
-              <Route exact={true} path="/about/user" component={AboutUser} />
+              <div style={{marginTop: 65}}>
+                <Route exact={true} path="/" component={Home} />
+                <Route exact={true} path="/about" component={About} />
+                <Route exact={true} path="/about/user" component={AboutUser} />
+              </div>
               <Footer />
             </div>
           </BrowserRouter>

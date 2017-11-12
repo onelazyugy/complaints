@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import logo from '../media/logo.svg';
+import logo from '../media/complaints.png';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
 import { Link } from "react-router-dom";
@@ -12,12 +12,20 @@ class Header extends Component {
   }
 
   render = () => {
+    const bg = {
+      background: "#ffffff",
+      position: "fixed",
+      top: 0
+    }
+    const title = {
+      color: "black"
+    }
     return (
       <div>
-        <AppBar
+        <AppBar style={bg} titleStyle={title}
           title="Complaints"
-          iconElementLeft={<Link to={"/"}><img src={logo} className="App-logo" alt="logo" /></Link>}
-          iconElementRight={<FlatButton label="Login" />}
+          iconElementLeft={<Link to={"/"}><img src={logo} className="app-logo" alt="logo" /></Link>}
+          iconElementRight={<FlatButton label="Login" style={{color: "black"}}/>}
         />
       </div>
     );
